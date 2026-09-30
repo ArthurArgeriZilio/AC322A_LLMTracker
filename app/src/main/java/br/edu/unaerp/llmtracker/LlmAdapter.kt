@@ -1,6 +1,7 @@
 package br.edu.unaerp.llmtracker
 
 import android.content.res.ColorStateList
+import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
@@ -54,10 +55,11 @@ class LlmAdapter(
                 contexto.getString(R.string.nota_lista, llm.avaliacao)
             }
 
-            val fundo = ContextCompat.getDrawable(contexto, R.drawable.bg_circulo)?.mutate()
             val cor = coresAvatar[kotlin.math.abs(llm.id) % coresAvatar.size]
-            fundo?.setTint(ContextCompat.getColor(contexto, cor))
-            binding.icone.background = fundo
+            binding.icone.background = GradientDrawable().apply {
+                shape = GradientDrawable.OVAL
+                setColor(ContextCompat.getColor(contexto, cor))
+            }
 
             if (llm.favorito) {
                 binding.estrela.setImageResource(R.drawable.ic_estrela)
