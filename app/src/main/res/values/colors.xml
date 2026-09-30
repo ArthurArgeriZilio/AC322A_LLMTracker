@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaria">#1565C0</color>
+    <color name="primaria_escura">#0D47A1</color>
+    <color name="fundo">#F3F6FB</color>
+    <color name="superficie">#FFFFFF</color>
+    <color name="texto">#1C2834</color>
+    <color name="texto_secundario">#5E6A75</color>
+    <color name="estrela">#F9A825</color>
+    <color name="chip_fundo">#E3F2FD</color>
+    <color name="branco">#FFFFFF</color>
+    <color name="cabecalho">#E8F1FC</color>
+    <color name="mensagem_fundo">#E8F5E9</color>
+    <color name="mensagem_texto">#1B5E20</color>
+
+    <color name="avatar_azul">#1565C0</color>
+    <color name="avatar_verde">#00897B</color>
+    <color name="avatar_roxo">#6A1B9A</color>
+    <color name="avatar_laranja">#EF6C00</color>
+    <color name="avatar_rosa">#C2185B</color>
+</resources>
