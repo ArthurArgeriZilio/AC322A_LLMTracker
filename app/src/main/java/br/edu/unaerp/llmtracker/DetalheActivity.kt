@@ -40,7 +40,7 @@ class DetalheActivity : AppCompatActivity() {
             return
         }
 
-        mostrar(llm)
+        mostrar(llm, preencherCampo = true)
 
         binding.botaoSalvarNota.setOnClickListener {
             val atual = MockLlms.buscar(llmId) ?: return@setOnClickListener
@@ -48,7 +48,7 @@ class DetalheActivity : AppCompatActivity() {
             val notas: String? = texto.ifEmpty { null }
             val atualizado = atual.copy(notas = notas)
             MockLlms.atualizar(atualizado)
-            mostrar(atualizado)
+            mostrar(atualizado, preencherCampo = false)
             binding.mensagem.text = getString(R.string.nota_salva)
             binding.mensagem.visibility = View.VISIBLE
         }
@@ -57,7 +57,7 @@ class DetalheActivity : AppCompatActivity() {
             val atual = MockLlms.buscar(llmId) ?: return@setOnClickListener
             val atualizado = atual.copy(favorito = !atual.favorito)
             MockLlms.atualizar(atualizado)
-            mostrar(atualizado)
+            mostrar(atualizado, preencherCampo = false)
             binding.mensagem.text = getString(
                 if (atualizado.favorito) R.string.virou_favorito else R.string.deixou_favorito
             )
@@ -65,7 +65,7 @@ class DetalheActivity : AppCompatActivity() {
         }
     }
 
-    private fun mostrar(llm: Llm) {
+    private fun mostrar(llm: Llm, preencherCampo: Boolean) {
         binding.toolbar.title = llm.nome
         binding.nome.text = llm.nome
         binding.provedor.text = llm.provedor
@@ -79,7 +79,9 @@ class DetalheActivity : AppCompatActivity() {
 
         binding.lancamento.text = llm.lancamento ?: getString(R.string.sem_lancamento)
         binding.notas.text = llm.notas ?: getString(R.string.sem_notas)
-        binding.campoNotas.setText(llm.notas.orEmpty())
+        if (preencherCampo) {
+            binding.campoNotas.setText(llm.notas.orEmpty())
+        }
 
         if (llm.favorito) {
             binding.botaoFavorito.setText(R.string.remover_favorito)
