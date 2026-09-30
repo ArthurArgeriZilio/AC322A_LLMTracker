@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LLM Tracker</string>
+    <string name="subtitulo_lista">Modelos que eu acompanho</string>
+    <string name="contador">%1$d modelos · %2$d favoritos</string>
+    <string name="sem_avaliacao">Sem avaliação</string>
+    <string name="nota_lista">%1$.1f</string>
+    <string name="nota_formatada">Nota %1$.1f de 5</string>
+    <string name="cd_icone_modelo">Ícone do modelo</string>
+    <string name="cd_favorito">Marcado como favorito</string>
+    <string name="cd_nao_favorito">Ainda não é favorito</string>
+    <string name="cd_voltar">Voltar</string>
+
+    <string name="detalhe_titulo">Detalhes</string>
+    <string name="secao_sobre">Sobre</string>
+    <string name="secao_avaliacao">Avaliação</string>
+    <string name="secao_lancamento">Lançamento</string>
+    <string name="secao_notas">Minhas anotações</string>
+    <string name="sem_notas">Nenhuma anotação ainda.</string>
+    <string name="sem_lancamento">Não informado</string>
+    <string name="hint_notas">Escreva uma anotação</string>
+    <string name="salvar_nota">Salvar anotação</string>
+    <string name="nota_salva">Anotação atualizada.</string>
+    <string name="marcar_favorito">Marcar como favorito</string>
+    <string name="remover_favorito">Remover dos favoritos</string>
+    <string name="virou_favorito">Entrou na sua lista de favoritos.</string>
+    <string name="deixou_favorito">Saiu dos favoritos.</string>
+    <string name="chip_favorito">Favorito</string>
+    <string name="chip_acompanhando">Acompanhando</string>
+    <string name="nao_encontrado">Não achei esse modelo. Volte e escolha outro da lista.</string>
+    <string name="nao_encontrado_nome">Não achei \"%1$s\" na lista.</string>
+</resources>
